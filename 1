@@ -1,0 +1,9 @@
+noise(5, 0.4)
+  .modulateScale(o1)
+  .color(1, 2, 3)
+  .modulate(o0, 0.1)
+  .layer(osc(10, 1).mask(noise(3, 0.1))) // Добавляем осциллятор поверх шума
+  .out(o0)
+
+osc(100, 1)
+  .out(o1)
